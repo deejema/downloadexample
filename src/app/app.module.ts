@@ -3,16 +3,24 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { DownloadscreenComponent } from './downloadscreen/downloadscreen.component';
 
+import { DownloadserviceService } from './downloadservice.service'
+
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DownloadscreenComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+	HttpClientModule,
+	HttpModule
   ],
-  providers: [],
+  providers: [DownloadserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
